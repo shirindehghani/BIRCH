@@ -1,6 +1,6 @@
 # Let's Cluster some Credit Cards with BIRCH!
 Here, I use birch clustering algorithm.
-![alt text](file:///C:/Users/Shirin%20Dehghani/Desktop/2021-09-25.png)
+![alt text](https://s19.picofile.com/file/8441254850/2021_09_25.png)
 # Explain: 
 In this notebook I'll try to cluster some credit cards. we go through preprocessing, choose a model and train it on our data, and then evaluate and visualize our outcomes.
 
