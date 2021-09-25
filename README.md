@@ -50,4 +50,4 @@ Using IQR, we can follow the below approach to find outliers:
 
 
 # Removing the outliers 
-first, let's get rid of the noise. we're going to first set all outliers as 'NaN', so it will be taken care of in the next stage, where we impute the missing values.
+first, let's get rid of the noise. we're going to first set all outliers as `<NaN>`, so it will be taken care of in the next stage, where we impute the missing values.
