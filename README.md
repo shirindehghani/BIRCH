@@ -33,10 +33,21 @@ I used Credit Cards dataset for this project. You can download the dataset [here
 * seaborn
 * Scikit-learn
 
-# Method for check outliers
+## Preprocessing
+1) remove the outliers
+2) impute missing data
+3) scale the data
+4) Reduce dimentions using PCA
+
+
+# check for outliers
 Using IQR, we can follow the below approach to find outliers:
 * Calculate the first and third quartile (Q1 and Q3).
 * Further, evaluate the interquartile range, IQR = Q3-Q1.
 * Estimate the lower bound, the lower bound = Q1*1.5
 * Estimate the upper bound, upper bound = Q3*1.5
 * The data points that lie outside of the lower and the upper bound are outliers.
+
+
+# Removing the outliers 
+first, let's get rid of the noise. we're going to first set all outliers as '''NaN''', so it will be taken care of in the next stage, where we impute the missing values.
