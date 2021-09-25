@@ -50,4 +50,24 @@ Using IQR, we can follow the below approach to find outliers:
 
 
 # Removing the outliers 
-first, let's get rid of the noise. we're going to first set all outliers as `<NaN>`, so it will be taken care of in the next stage, where we impute the missing values.
+first, let's get rid of the noise. we're going to first set all outliers as `NaN`, so it will be taken care of in the next stage, where we impute the missing values.
+
+# Imputing the missing data
+I use `KNN` imputer: Each sample’s missing values are imputed using the mean value from n_neighbors nearest neighbors found in the training set.
+
+# Scale the Data
+I use `StandardScaler`
+
+## Dimention Reduction using PCA
+K-means, DBSCAN and agglomerative clustering, all use the Euclidean distance, which starts to lose its meaning when the number of dimensions starts increasing. so, before using these methods, we have to reduce the number of dimensions. I'm going to use PCA, which is by far the most popular dimensionality reduction algorithm.
+
+If you are not familiar with PCA or need to learn more about it, I highly recommend you read [Here](https://github.com/HalflingWizard/MachineLearning/blob/main/4-%20Dimensionality%20Reduction/PCA.md) on this dimentionality reduction method.
+here I set parameter n_components equals to 2 for better visualizing the results.
+
+# Optimize number of clusters
+I used Elbow method for estimating the optimize number of clusters. If you want to know more about it click [Here](https://www.oreilly.com/library/view/statistics-for-machine/9781788295758/c71ea970-0f3c-4973-8d3a-b09a7a6553c1.xhtml). 
+
+And I also used **Silhouette** method for this! 
+
+# Birch clustering
+At the end, I used Birch(Balanced Iterative Reducing and Clustering using Hierarchies) for clustering. If you want know more about it click [Here](https://medium.com/geekculture/balanced-iterative-reducing-and-clustering-using-hierarchies-birch-1428bb06bb38)
